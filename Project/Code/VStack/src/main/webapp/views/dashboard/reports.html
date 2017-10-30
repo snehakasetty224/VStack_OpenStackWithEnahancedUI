@@ -1,0 +1,78 @@
+<div>
+  <div ng-include="'menu.html'"></div>
+  <snap-dragger></snap-dragger>
+  <snap-content snap-opt-tap-to-close="false" >
+
+    <a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
+      <span class="menutoggle">
+        <i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
+        <i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+      </span>
+    </a>
+
+   <div class="fr">
+		<h2>Dashboard <small> <a ui-sref="login" class="btn btn-large btn-primary" ui-sref="overview" style="margin-left:60%">Logout</a></small></h2>
+		</div>
+		
+
+     <style>
+        div.content{
+          height:360px;
+          width:360px;
+          border:1px;
+          float:left;
+          margin:9.54px;
+        }
+        div.content1{
+          height:600px;
+          width:1150px;
+          float:left;
+          margin:9px;
+        }
+        div#first{
+          //background-color:#ff0000;
+        }
+        <style type="text/css">
+             .bigGraph {width:500px;height:500px;float:left;}
+             .mediumGraph {width:360px;height:360px;float:left;}
+             .smallGraph {width:200px;height:200px;float:left;}
+         </style>
+      </style>
+      <div class="container">
+      <div class="fr">
+        <div>
+          <p style="float:left">
+            <h1 style="color:white"> Service 1 </h1>
+        </div>
+       <div>
+        <div class="content" id="first">
+          <div google-chart="PieChart" ng-model="data1" class="mediumGraph"></div>
+        </div>
+        <div class="content" id="first">
+          <div google-chart="PieChart" ng-model="data2" class="mediumGraph"></div>
+        </div>
+        <div class="content" id="first">
+          <div google-chart="PieChart" ng-model="data3" class="mediumGraph"></div>
+        </div>
+        <div class="content" id="first">
+          <div google-chart="PieChart" ng-model="data4" class="mediumGraph"></div>
+        </div>
+          <div class="content" id="first">
+            <div google-chart="PieChart" ng-model="data3" class="mediumGraph"></div>
+          </div>
+          <div class="content" id="first">
+            <div google-chart="PieChart" ng-model="data3" class="mediumGraph"></div>
+          </div>
+       </div>
+     <div>
+        <p style="float:left">
+         <h1 style="color:white"> Running Instance Status</h1>
+    </div>
+        <div class="content1" id="first">
+          <div google-chart="BarChart" ng-model="data5" class="bigGraph"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+      </div>
+  </snap-content>

@@ -1,0 +1,117 @@
+<div>
+  <div ng-include="'menu.html'"></div>
+  <snap-dragger></snap-dragger>
+  <snap-content snap-opt-tap-to-close="false">
+  <!--class="bg-dark">!-->
+
+    <a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
+      <span class="menutoggle">
+        <i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
+        <i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+      </span>
+    </a>
+<div class="fr">
+		<h2>Instance Service <small> <a ui-sref="login" class="btn btn-large btn-primary" ui-sref="overview" style="margin-left:52%">Logout</a></small></h2>
+		</div>
+	         
+<form role="form" onload="initialize()">
+<!--Static Web Service!-->
+<div class="container">
+		<div class="row col-lg-10" >
+			<center><div class="panel panel-success center_div">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><b>Static Web Service</b></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                <label style="color: black"> Service Name</label>
+                                <input class="form-control" ng-model="instance.name" placeholder="Enter Service Name" style="width:50% !important">
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Flavor</label>
+                                <select class="form-control" ng-model="instance.flavor" placeholder="Choose Flavor" style="width:50% !important">
+                                   <option ng-repeat="(key, value) in flavors" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Server OS</label>
+                                <select class="form-control" ng-model="instance.image" style="width:50% !important">
+                                    <option ng-repeat="(key, value) in images" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                           <!--  <div class="form-group">
+                                <label style="color: black">Web Server</label>
+                                <select class="form-control">
+                                    <option selected>Web Server 1</option>
+                                    <option>Web Server 2</option>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <label style="color: black">Choose Network</label>
+                                <select class="form-control" ng-model="instance.network" style="width:50% !important">
+                                    <option ng-repeat="(key, value) in networks" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-info" ng-click="launchInstance(instance)">Start </button>&nbsp;&nbsp;
+                           <button type="submit" class="btn btn-success" ui-sref="overview">View Instances</button>&nbsp;&nbsp;
+                            </div>
+                            
+                        </div> </center>
+                        </div>
+                        </div>
+
+                          
+						<!-- Dynamic Web Service! -->
+                       
+                       <div class="container">
+                     
+<div class="row col-lg-10"  >
+                        <center><div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><b>Dynamic Web Service</b></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                <label style="color: black">Service Name</label>
+                                <input class="form-control" placeholder="Enter Service Name" ng-model="instance.name" style="width:50% !important">
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Flavor</label>
+                                <select class="form-control" ng-model="instance.flavor" placeholder="Choose Flavor" style="width:50% !important">
+                                   <option ng-repeat="(key, value) in flavors" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Server OS</label>
+                                <select class="form-control" ng-model="instance.image" style="width:50% !important">
+                                    <option ng-repeat="(key, value) in images" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Choose Network</label>
+                                <select class="form-control" ng-model="instance.network" style="width:50% !important">
+                                    <option ng-repeat="(key, value) in networks" value="{{key}}">{{key}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Web Server</label>
+                                <select class="form-control" ng-model="sensor.group1" style="width:50% !important">
+                                    <option>Apache</option>
+                                   
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="color: black">Database Server</label>
+                                <select class="form-control" ng-model="sensor.group2" style="width:50% !important">
+                                    <option>MySQL</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-info" ng-click="launchInstance(instance)">Start </button>&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-success" ui-sref="overview">View Instances</button>&nbsp;&nbsp;
+                            </div>
+                        </div></center>
+                        </div>
+                        
+                            </form>
+                    </div>
+                </div> 
